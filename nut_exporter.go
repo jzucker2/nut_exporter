@@ -95,6 +95,7 @@ func (h *metricsHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.URL.Query().Get("serverport") != "" {
+		level.Debug(logger).Log("msg", fmt.Sprintf("Using serverport `%s`", r.URL.Query().Get("serverport")))
 		if port, err := strconv.Atoi(r.URL.Query().Get("serverport")); err != nil {
 			thisCollectorOpts.ServerPort = port
 		}
