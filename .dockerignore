@@ -1,0 +1,9 @@
+Dockerfile
+.DS_Store
+.gitignore
+.dockerignore
+
+/node_modules
+*.DS_Store
+.AppleDouble
+.LSOverride
